@@ -7,6 +7,7 @@ namespace program{
             bool running = true;
 
             while(running){
+                
                     Console.Write("User 1, enter a number between 0 and 100: ");
                 
                     int number = Convert.ToInt32(Console.ReadLine());
