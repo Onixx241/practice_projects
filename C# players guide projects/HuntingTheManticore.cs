@@ -4,6 +4,14 @@ namespace prog {
 
     public class Program {
 
+        public static void DisplayGameResult(bool won){
+            
+            if(won)
+                Console.WriteLine("The Manticore has been destroyed! The city of Consolas has been saved!");
+            else
+                Console.WriteLine("The city has been destroyed. The Manticore and the Uncoded One have won.");
+        
+        }
         public static int getCannonDmg(int round) {
 
             int damage = 1;
@@ -77,11 +85,15 @@ namespace prog {
                 else {
                     CityHp = CityHp - 1;
                 }
-
+                 
                 Console.Clear();
                 round++;
+                
+                 
             }
-
+            
+            bool won = CityHp > 0;
+            DisplayGameResult(won);
         }
 
     }
